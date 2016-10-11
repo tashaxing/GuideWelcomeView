@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "GuideView.h"
+#import "WelcomeView.h"
 
 @interface AppDelegate ()
 
@@ -16,12 +18,53 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+// 判断是否第一次启动或者更新后
+- (BOOL)isGuideNeeded
+{
+    // 从info.plist获取当前版本号
+    NSDictionary *infoDict = [[NSBundle mainBundle] infoDictionary];
+    NSString *curAppVersion = infoDict[@"CFBundleShortVersionString"];
+    
+    // 获取上次启动应用保存的appVersion
+    NSString *lastAppVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"kAppVersion"];
+    
+    // 判断是否版本升级或首次登录
+    if (!lastAppVersion || ![curAppVersion isEqualToString:lastAppVersion])
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:curAppVersion forKey:@"kAppVersion"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    MainViewController *mainVC = [[MainViewController alloc] init];
     
+    // 添加主vc
+    MainViewController *mainVC = [[MainViewController alloc] init];
     self.window.rootViewController = mainVC;
+ 
+    
+    if ([self isGuideNeeded])
+    {
+        // 引导页
+        GuideView *guideView = [[GuideView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
+        [mainVC.view addSubview:guideView];
+    }
+    else
+    {
+        // 启动页
+        WelcomeView *welcomeView = [[WelcomeView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
+        [mainVC.view addSubview:welcomeView];
+    }
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

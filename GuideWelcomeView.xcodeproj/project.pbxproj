@@ -12,6 +12,12 @@
 		E40DAE811DAC890700FE8228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40DAE801DAC890700FE8228 /* Assets.xcassets */; };
 		E40DAE841DAC890700FE8228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40DAE821DAC890700FE8228 /* LaunchScreen.storyboard */; };
 		E40DAE8D1DAC891D00FE8228 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40DAE8C1DAC891D00FE8228 /* MainViewController.m */; };
+		E40DAE901DAC94B800FE8228 /* GuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = E40DAE8F1DAC94B800FE8228 /* GuideView.m */; };
+		E40DAE931DAC94C700FE8228 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E40DAE921DAC94C700FE8228 /* WelcomeView.m */; };
+		E40DAE971DACBB8300FE8228 /* guide1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E40DAE941DACBB8300FE8228 /* guide1.jpg */; };
+		E40DAE981DACBB8300FE8228 /* guide2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E40DAE951DACBB8300FE8228 /* guide2.jpg */; };
+		E40DAE991DACBB8300FE8228 /* guide3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E40DAE961DACBB8300FE8228 /* guide3.jpg */; };
+		E40DAE9B1DACBB8D00FE8228 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E40DAE9A1DACBB8D00FE8228 /* welcome.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,14 @@
 		E40DAE851DAC890700FE8228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E40DAE8B1DAC891D00FE8228 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		E40DAE8C1DAC891D00FE8228 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E40DAE8E1DAC94B800FE8228 /* GuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideView.h; sourceTree = "<group>"; };
+		E40DAE8F1DAC94B800FE8228 /* GuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideView.m; sourceTree = "<group>"; };
+		E40DAE911DAC94C700FE8228 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeView.h; sourceTree = "<group>"; };
+		E40DAE921DAC94C700FE8228 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeView.m; sourceTree = "<group>"; };
+		E40DAE941DACBB8300FE8228 /* guide1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide1.jpg; sourceTree = "<group>"; };
+		E40DAE951DACBB8300FE8228 /* guide2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide2.jpg; sourceTree = "<group>"; };
+		E40DAE961DACBB8300FE8228 /* guide3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide3.jpg; sourceTree = "<group>"; };
+		E40DAE9A1DACBB8D00FE8228 /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcome.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,10 @@
 				E40DAE7A1DAC890700FE8228 /* Supporting Files */,
 				E40DAE8B1DAC891D00FE8228 /* MainViewController.h */,
 				E40DAE8C1DAC891D00FE8228 /* MainViewController.m */,
+				E40DAE8E1DAC94B800FE8228 /* GuideView.h */,
+				E40DAE8F1DAC94B800FE8228 /* GuideView.m */,
+				E40DAE911DAC94C700FE8228 /* WelcomeView.h */,
+				E40DAE921DAC94C700FE8228 /* WelcomeView.m */,
 			);
 			path = GuideWelcomeView;
 			sourceTree = "<group>";
@@ -71,6 +89,10 @@
 		E40DAE7A1DAC890700FE8228 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E40DAE9A1DACBB8D00FE8228 /* welcome.jpg */,
+				E40DAE941DACBB8300FE8228 /* guide1.jpg */,
+				E40DAE951DACBB8300FE8228 /* guide2.jpg */,
+				E40DAE961DACBB8300FE8228 /* guide3.jpg */,
 				E40DAE7B1DAC890700FE8228 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -133,7 +155,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40DAE9B1DACBB8D00FE8228 /* welcome.jpg in Resources */,
+				E40DAE991DACBB8300FE8228 /* guide3.jpg in Resources */,
 				E40DAE811DAC890700FE8228 /* Assets.xcassets in Resources */,
+				E40DAE981DACBB8300FE8228 /* guide2.jpg in Resources */,
+				E40DAE971DACBB8300FE8228 /* guide1.jpg in Resources */,
 				E40DAE841DAC890700FE8228 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,9 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40DAE931DAC94C700FE8228 /* WelcomeView.m in Sources */,
 				E40DAE7F1DAC890700FE8228 /* AppDelegate.m in Sources */,
 				E40DAE8D1DAC891D00FE8228 /* MainViewController.m in Sources */,
 				E40DAE7C1DAC890700FE8228 /* main.m in Sources */,
+				E40DAE901DAC94B800FE8228 /* GuideView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
